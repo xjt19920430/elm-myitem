@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1">
+    <link rel="stylesheet" href="/static/css/reset.css">
+    <title>饿了吗 </title>
+    <style>
+      html{
+        font-size: 14px;
+      }
+    </style>
+  </head>
+  <body>
+    <div id="app"></div>
+    <!-- built files will be auto injected -->
+  </body>
+  <script>
+      function remChange()
+      {
+          //以UI设计稿1920 * 1080 为参考标准 html font-size 100px
+          var deviceWidth = document.documentElement.clientWidth;
+          // deviceWidth = 1920;
+          document.documentElement.style.fontSize = parseFloat((deviceWidth / 375)*14).toFixed(3)-0.01 + 'px';     //适当减去 一些误差防止rem计算总宽度不够。rem转化<1px，浏览器默认为1px问题
+      }
+      remChange();
+      window.addEventListener('resize',remChange);
+      remChange();
+  </script>
+</html>

@@ -40,7 +40,6 @@
 
 <script>
     import BSscroll from 'better-scroll'
-
     import shopIcon from '../shopicon/shopicon'
     export default {
         data (){

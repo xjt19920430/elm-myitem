@@ -4,7 +4,7 @@
             {{select.name}}
         </div>
         <div class='deliveryPrice'>
-            <el-rate v-model="select.score" disabled :allow-half=true></el-rate>
+            <star :size='48' :score='select.score'></star>
         </div>
         <div class='discountsTitle'>
             <span></span>
@@ -32,6 +32,7 @@
 </template>
 
 <script>
+    import star from '../star/star'
     export default {
         data(){
           return {
@@ -51,6 +52,9 @@
             }).then( (rsp)=> {
                 this.select=rsp.data.seller
             })
+        },
+        components: {
+            star,
         }
     }
 </script>

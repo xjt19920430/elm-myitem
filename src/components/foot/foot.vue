@@ -41,7 +41,7 @@
                     return '￥'+this.select.minPrice+'元起送'
                 }else if(this.totalPrices < this.select.minPrice ){
                     let priceSpread = this.select.minPrice - this.totalPrices
-                    return '还差￥'+priceSpread+'元起送'
+                    return '还差￥' + priceSpread + '元'
                 }else {
                     return '去结算'
                 }

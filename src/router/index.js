@@ -5,6 +5,9 @@ Vue.use(Router)
 import Shop from '../components/shop/shop'
 import Goods from '../components/goods/goods'
 import Shops from  '../components/shops/shops'
+import GoodselectAll from '../components/goodselectall/goodselectall'
+import GoodselectTrue from '../components/goodselecttrue/goodselecttrue'
+import GoodselectFalse from '../components/goodselectfalse/goodselectfalse'
 export default new Router({
     linkActiveClass:'active',
   routes: [
@@ -18,11 +21,26 @@ export default new Router({
       },
       {
           path:'/goods',
-          component:Goods
+          component: Goods,
+          children: [
+              {
+                  path: '/goods',
+                  component: GoodselectAll
+              },
+              {
+                  path: '/goods/yes',
+                  component: GoodselectTrue
+              },
+              {
+                  path: '/goods/no',
+                  component: GoodselectFalse
+              }
+          ]
       },
       {
           path:'/shops',
           component:Shops
       }
+
   ]
 })

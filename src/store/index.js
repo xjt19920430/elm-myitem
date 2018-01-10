@@ -9,7 +9,8 @@ let store = new Vuex.Store({
         ifShow:'',
         goodsContent:{},
         totalPrice: [],
-        unOFF: false
+        unOFF: false,
+        selectIndex: 2
 
     },
     mutations:{
@@ -23,12 +24,11 @@ let store = new Vuex.Store({
         addTotalPrice(state,list){
             state.totalPrice=list
         },
-        contextShow(state, list) {
-            // console.log(list)
-            // Vue.set(state,state.unOFF,list)
-            // console.log(state.unOFF)
+        contextShow(state) {
             state.unOFF = !state.unOFF
-            console.log(state.unOFF)
+        },
+        getSelectIndex(state, list) {
+            state.selectIndex = list
         }
 
     },

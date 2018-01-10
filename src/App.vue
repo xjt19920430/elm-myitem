@@ -42,7 +42,6 @@ export default {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   color: #2c3e50;
   position: relative;
-  overflow: hidden;
   padding-bottom: px2em(48);
   box-sizing: border-box;
 }

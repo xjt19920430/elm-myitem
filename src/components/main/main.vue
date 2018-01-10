@@ -30,6 +30,7 @@
     top: px2em(134);
     left: 0;
     width: 100%;
+    height: 100%;
     .mainNav {
         height: px2em(40);
         width: 100%;
